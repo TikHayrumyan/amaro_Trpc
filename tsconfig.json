@@ -28,6 +28,6 @@
     "**/*.tsx",
     "**/*.cjs",
     "**/*.mjs"
-  ],
+, "src/components/layout.js"  ],
   "exclude": ["node_modules","tailwind.config.ts"]
 }

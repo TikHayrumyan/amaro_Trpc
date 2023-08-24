@@ -1,3 +1,87 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+
+	*{
+		box-sizing: border-box;
+		padding: 0px;
+		margin: 0px;
+	}
+	body{
+		overflow-x: hidden;
+	}
+	/* google Layout columns (Grid)
+		ADD:
+		col-4
+		col-8
+		col-12 
+		TO sm, md, lg
+	*/
+	
+	.googleGrid {
+		@apply grid grid-cols-4 gap-2 sm:grid-cols-8 md:gap-6 md:grid-cols-12;
+	}
+
+	
+	/* Google Container 
+		set width and padding (margin-auto)
+		FOR sm, md, lg
+		https://material.io/design/layout/responsive-layout-grid.html#breakpoints
+	*/
+	.googleContainer {
+		@apply w-full mx-auto px-4 sm:px-8 md:px-6 lg:px-[200px] xl:max-w-[1128px] xl:px-0;
+	}	
+
+
+	/* Golden Grid 
+		FOR width Screen 1920
+		max-w-130px
+		max-w-80px
+	*/
+	.golden8Container {
+		@apply w-full mx-auto px-4 sm:px-8 md:px-6 lg:px-[calc((100%-(100%/1.618))/2)] xl:max-w-[890px] xl:px-0;
+	}
+
+	.golden13Container {
+		@apply w-full mx-auto px-4 sm:px-8 md:px-6 lg:px-[calc((100%-(100%/1.618*1.5))/2)] xl:max-w-[1335px] xl:px-0;
+	}
+
+	*::-webkit-scrollbar {
+		width: 6px;
+	}
+	
+	*::-webkit-scrollbar-track {
+		border-radius: 8px;
+		background-color: #e7e7e7;
+		border: 1px solid #cacaca;
+		box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+	}
+	
+	*::-webkit-scrollbar-thumb {
+		border-radius: 8px;
+		background-color: #52575C;
+	}
+
+	
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover,
+	input:-webkit-autofill:focus,
+	input:-webkit-autofill:active {
+		transition: background-color 5000s ease-in-out 0s;
+	
+	}
+	/* Chrome, Safari, Edge, Opera */
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+	}
+
+	/* Firefox */
+	input[type=number] {
+	-moz-appearance: textfield;
+	}
+}
