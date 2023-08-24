@@ -1,12 +1,12 @@
 import {Header} from "./Header"
 import { Inter } from 'next/font/google'
 import Head from "next/head"
-import React from 'react'
+import React, { ReactNode } from 'react'
 const inter = Inter({ subsets: ['latin'] })
 
 
 export default function RootLayout({ children ,title } : {
-  children : any,
+  children : ReactNode,
   title : string
 }) {
   return (
